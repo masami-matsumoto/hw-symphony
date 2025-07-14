@@ -1,0 +1,365 @@
+@charset "utf-8";
+/* CSS Document */
+/********************************************************************
+	index.css
+*********************************************************************/
+/*==========================================================================
+	スライド bxslider
+============================================================================*/
+.slideWap {
+	max-width:1260px;
+	margin:10px auto 30px;
+	list-style:none;
+	padding:0px;
+}
+.slideWap .slider01 {
+	margin:0px;
+	padding:0px;
+}
+.slideWap .slider01 li {
+	margin:0px;
+	padding:0px;
+}
+/*-- bxslider css 上書き --*/
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    bottom: -40px !important;
+}
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  .slideWap {
+    margin:20px auto 30px;
+  }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  .slideWap {
+    margin:30px auto;
+  }
+}
+
+/*==========================================================================
+	イントロエリア
+============================================================================*/
+#contents .introArea {
+  padding: 25px 10px;
+  background-image:url(/wp/wp-content/themes/hw-symphony/img/bg_wt.jpg);
+  background-size:cover;
+	background-position:center center;
+}
+
+#contents .introArea .captxt {  
+text-align: left; 
+font-size: 11px;  
+margin: 10px 0px; 
+}
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  #contents .introArea {
+    padding: 50px 10px;
+  }
+  #contents .introArea .captxt {  
+    text-align: right;  
+  }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {  
+  #contents .introArea .captxt {  
+   max-width: 1280px;  
+   margin: 10px auto; 
+  }
+}
+
+
+/*==========================================================================
+	メニューエリア
+============================================================================*/
+#contents .menuArea {
+  padding: 25px 10px;
+}
+#contents .menuArea ul {
+  overflow: hidden;
+  list-style: none;
+}
+#contents .menuArea ul .menuBox {
+  float: left;
+  box-sizing: border-box;
+  width: 50%;
+  margin-bottom: 10px;
+}
+/*--- リンク ---*/
+#contents .menuArea ul .menuBox a:link,
+#contents .menuArea ul .menuBox a:visited {
+	  color: #FFFFFF;
+	  text-decoration: none;
+  }
+#contents .menuArea ul .menuBox a:hover,
+#contents .menuArea ul .menuBox a:active {
+	  color: #b6d9b7;
+	  text-decoration: none;
+  }
+#contents .menuArea ul .menuBox:nth-child(odd) {
+  padding-right: 5px;
+}
+#contents .menuArea ul .menuBox:nth-child(even) {
+  padding-left: 5px;
+}
+/*-- 画像部 --*/
+#contents .menuArea ul .menuBox .pic {
+  margin-bottom: 5px;
+}
+/*-- テキスト部 --*/
+#contents .menuArea ul .menuBox .txt {
+  background-color: #0062a9;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  padding: 50px 10px 30px;
+  background-image: url(/wp/wp-content/themes/hw-symphony/img/top_menu_bg_dent.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  font-size: 18px;
+}
+/*****************************************************
+	320px以下【sp】
+******************************************************/
+@media print, screen and (max-width: 320px) {
+  #contents .menuArea ul .menuBox {
+    float: none;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #contents .menuArea ul .menuBox:nth-child(odd) {
+    padding-right: 0px;
+  }
+  #contents .menuArea ul .menuBox:nth-child(even) {
+    padding-left: 0px;
+  }
+}
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+ 
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  #contents .menuArea {
+    max-width: 1280px;
+    padding: 50px 0px;
+    margin: 0px auto;
+  }
+  #contents .menuArea ul .menuBox {
+    float: left;
+    width: 25%;
+  }
+  #contents .menuArea ul .menuBox:nth-child(odd) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  #contents .menuArea ul .menuBox:nth-child(even) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  /*-- テキスト部 --*/
+  #contents .menuArea ul .menuBox .txt {
+    font-size: 22px;
+  }
+  
+  
+}
+
+/*==========================================================================
+	ニュースエリア
+============================================================================*/
+#contents .newsArea {
+  padding: 60px 10px;
+  background-color: #f2f2f2;
+  background-image: url("/wp/wp-content/themes/hw-symphony/common/img/bg_dent_w.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+#contents .newsArea i {
+  color: #0062A9;
+}
+#contents .newsArea dl {
+  border-bottom: solid 1px #CCCCCC;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  line-height: 1.6;
+}
+#contents .newsArea dl dt {
+  width: 100%;
+}
+#contents .newsArea dl dt.news1::after {
+  content: 'お知らせ';
+  background-color: #0062a9;
+  font-size: 10px;
+  color: #FFF;
+  text-align: center;
+  padding: 1px 32px;
+  line-height: 1;
+  margin-left: 20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  vertical-align:middle;
+}
+#contents .newsArea dl dt.news2::after {
+  content: 'ニュースリリース';
+  background-color: #199c69;
+  font-size: 10px;
+  color: #FFF;
+  text-align: center;
+  padding: 1px 12px;
+  line-height: 1;
+  margin-left: 20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  vertical-align:middle;
+}
+#contents .newsArea dl dt.news3::after {
+  content: 'ニュースレター';
+  background-color: #e09f25;
+  font-size: 10px;
+  color: #FFF;
+  text-align: center;
+  padding: 1px 17px;
+  line-height: 1;
+  margin-left: 20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  vertical-align:middle;
+}
+#contents .newsArea dl dd {
+  width: 100%;
+}
+/*--- リンク ---*/
+#contents .newsArea dl dd a:link, #contents .newsArea dl dd a:visited {
+	color: #000;
+	/* text-decoration: none; */
+	text-decoration:underline;
+}
+#contents .newsArea dl dd a:hover, #contents .newsArea dl dd a:active {
+	color: #0026A9;
+	text-decoration:underline;
+}
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  #contents .newsArea {
+    padding: 100px 10px;
+  }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  #contents .newsArea dl {
+    max-width: 960px;
+    margin: 0px auto 8px;
+  }
+  #contents .newsArea dl dt {
+    width: 30%;
+    float: left;
+  }
+  #contents .newsArea dl dd {
+    width: 70%;
+    float: right;
+  }
+}
+
+/*==========================================================================
+	ピックアップエリア
+============================================================================*/
+#contents .picupArea {
+  padding: 60px 0px 0px 0px;
+  background-image: url("/wp/wp-content/themes/hw-symphony/common/img/bg_dent_g.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+#contents .picupArea ul {
+  list-style: none;
+}
+#contents .picupArea ul .banr {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+    #contents .picupArea {
+      padding: 100px 0px 0px 0px;
+    }
+    #contents .picupArea ul .banr {
+      width: 50%;
+      float: left;
+    }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  #contents .picupArea ul {
+    max-width: 1280px;
+    margin: 0px auto;
+  }
+}
+
+/*==========================================================================
+	クイズバナー
+============================================================================*/
+.quizBanr {
+   padding: 5px 10px 25px;
+}
+.quizBanr .banr {
+   text-align: center;
+}
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+ 
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  .quizBanr {
+     max-width: 1280px;
+     padding: 5px 10px 50px;
+     margin: 0px auto;
+     box-sizing: border-box;
+  }
+
+}
+/*==========================================================================
+	xxxxxxxxxx
+============================================================================*/
+
+
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+ 
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  
+}
+

@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+/********************************************************************
+	bid.css
+*********************************************************************/
+  .bid_color {
+    color: #0062A9;
+  }
+  table.bid {
+    width: 100%;
+    margin: auto;
+  }
+  table.bid tr {
+    width: 100%;
+    border-bottom: 1px solid #333;
+  }
+  table.bid th, table.bid td {
+    box-sizing: border-box;
+    padding: 15px;
+  }
+  table.bid thead th {
+    text-align: center;
+    width: 15%;
+  }
+  table.bid thead th.bid_uke {
+    text-align: center;
+    width: 50%;
+  }
+  table.bid thead th.bid_dl, 
+  table.bid thead th.bid_name {
+    width: 35%;
+  }
+  table.bid tbody {
+    text-align: left;
+  }
+  table.bid tbody th {
+    text-align: left;
+  }
+  table.bid tbody td {
+    text-align: center;
+  }
+  .bid_none {
+	  display:none;
+  }
+
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (max-width: 768px) {
+  section.bid_table {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px 20px;
+  }
+
+  table tr {
+    display: block;
+    width: 100%;
+  }
+  table.bid thead {
+    display: none;
+  }
+  table.bid tbody {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  table.bid tbody th {
+    list-style: none;
+  }
+  table.bid tbody td {
+    list-style: none;
+    margin-left: 10px;
+  }
+  table.bid tbody th, table.bid tbody td {
+    width: 100%;
+    display: list-item;
+    text-align: left;
+  }
+  .bid_none {
+	  display:inherit;
+  }
+}

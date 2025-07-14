@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="クイズ,下水道検定">
+<meta name="description" content="浜松ウォーターシンフォニーによる下水道検定クイズページです">
+<title>西遠下水道検定 | 浜松ウォーターシンフォニー株式会社</title>
+
+<!-- viewport -->
+<meta name="viewport" content="width=device-width">
+
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="//hw-symphony.jp/wp/wp-content/themes/hw-symphony/common/font/font-awesome/css/font-awesome.min.css" >
+<link rel="stylesheet" type="text/css" href="//hw-symphony.jp/wp/wp-content/themes/hw-symphony/common/css/reset.css">
+<link rel="stylesheet" type="text/css" href="//hw-symphony.jp/wp/wp-content/themes/hw-symphony/common/css/layout.css">
+<link rel="stylesheet" type="text/css" href="//hw-symphony.jp/wp/wp-content/themes/hw-symphony/common/css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/quiz.css">
+  
+<!-- script -->
+<script type="text/javascript" src="//hw-symphony.jp/wp/wp-content/themes/hw-symphony/common/js/lib/jquery.js"></script>
+<script type="text/javascript" src="//hw-symphony.jp/wp/wp-content/themes/hw-symphony/common/js/gnavi.js"></script>
+<script type="text/javascript" src="//hw-symphony.jp/wp/wp-content/themes/hw-symphony/common/js/gotop.js"></script>
+<script type="text/javascript" src="//hw-symphony.jp/wp/wp-content/themes/hw-symphony/common/js/jquery.matchHeight.js"></script>
+<script type="text/javascript" src="./js/lib/vue.min.js"></script>
+<script type="text/javascript" src="./js/quiz.js"></script>
+
+<!--[if lt IE 9]>
+<script src="common/js/lib/html5shiv.min.js"></script>
+<script src="common/js/lib/css3-mediaqueries.js"></script>
+<![endif]-->
+
+
+<script>
+$(function(){
+  //フッダーナビ
+  $('#footer .footnav li').matchHeight();
+  //設問領域
+  $('#contents .quizArea ul .quizBox .txt .quizQue').matchHeight();
+  //ページ下部メニュー
+  $('.pageMenuArea .pgmenu a').matchHeight();
+});
+</script>
+
+<style type="text/css">
+<!--
+    #contents .quizArea ul .quizBox .txt .quizQue{height:50px;}
+
+/*--- pagettl クイズ用 ---------------------------------*/
+.pagettl2 {
+  background-image: url("//hw-symphony.jp/wp/wp-content/themes/hw-symphony/common/img/pagettl_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  margin: 10px auto 20px;
+  padding: 15px 10px;
+  
+  border-top: #BBD3F9 solid 1px;
+  border-bottom: #BBD3F9 solid 1px;
+}
+.pagettl2 .pttl {
+  font-size: 18px;
+  background-image: linear-gradient(to right, #0062A9 0%, #0062A9 45%, #199C69 55%, #199C69 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*-- IE ハック --*/
+/* IE8〜11 */
+@media screen\0 {
+  .pagettl2 .pttl {
+    background: none;
+    color: #0062A9;
+  }
+}
+
+  
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  .pagettl2 {
+     margin: 10px auto 20px;
+     padding: 20px 10px;
+  }
+  .pagettl2 .pttl {
+    font-size: 32px;
+  }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  .pagettl2 {
+    max-width: 1260px;
+    height: 100px;
+    line-height: 100px;
+    margin: 10px auto 5px;
+    padding: 0px;
+    
+    border: none;
+  }
+  .pagettl2 .pttl {
+    font-size: 38px;
+  }
+}
+
+
+/*-- クイズ結果のコメント --*/
+  .kekkaBox {
+    padding: 10px;
+    text-align: left;
+  }
+  .kekkaBox .msg01 {
+    font-weight: bold;
+    text-align: center;
+  }
+  .kekkaBox .msg02 {
+    font-weight: normal;
+    text-align: left;
+  }
+  
+  
+-->
+</style>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136349595-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136349595-1');
+</script>
+
+</head>
+
+<body>
+
+<div id="wapper">
+  <header id="header">
+    <div id="headerinnr">
+      <h1 id="logo"><a href="../index/"><img src="//hw-symphony.jp/wp/wp-content/themes/hw-symphony/common/img/logo.png" class="fluidimg2" alt="浜松ウォーターシンフォニー株式会社"/></a></h1>
+      <nav class="pcSubNavi">
+        <ul>
+          <li><a href="../news/category/news2/">ニュースリリース</a></li><li><a href="../sitemap/">サイトマップ</a></li><li><a href="../access/">アクセスマップ</a></li><!--<li><a href="inquiry/">お問い合わせ</a></li>-->
+        </ul>
+      </nav>
+      <nav class="pcGloNavi">
+        <ul>
+          <li class="gnav1"><a href="../"><i class="fa fa-home mgR05" aria-hidden="true"></i>HOME</a></li>
+          <li class="gnav2"><a href="../aboutus/"><i class="fa fa-building mgR05" aria-hidden="true"></i>当社について</a></li>
+          <li class="gnav3"><a href="../business/"><i class="fa fa-tint mgR05" aria-hidden="true"></i>事業内容</a></li>
+          <li class="gnav4"><a href="../bid/"><i class="fa fa-sticky-note mgR05" aria-hidden="true"></i>入札・契約情報</a></li>
+          <li class="gnav5"><a href="../csr/"><i class="fa fa-globe mgR05" aria-hidden="true"></i>CSR</a></li>
+        </ul>
+      </nav>
+      
+    </div>
+  </header>
+  <div class="btnWap">
+     <div class="menu">
+              <div class="menu1"></div>
+              <div class="menu2"></div>
+              <div class="menu3"></div>
+     </div>
+  </div>
+  <nav class="gNavi">
+    <ul>
+      <li class="gnav1"><a href="../"><i class="fa fa-home mgR05" aria-hidden="true"></i>HOME</a></li>
+      <li class="gnav2"><a href="../aboutus/"><i class="fa fa-building mgR05" aria-hidden="true"></i>当社について</a></li>
+      <li class="gnav3"><a href="../business/"><i class="fa fa-tint mgR05" aria-hidden="true"></i>事業内容</a></li>
+      <li class="gnav4"><a href="../bid/"><i class="fa fa-sticky-note mgR05" aria-hidden="true"></i>入札・契約情報</a></li>
+      <li class="gnav5"><a href="../csr/"><i class="fa fa-globe mgR05" aria-hidden="true"></i>CSR</a></li>
+    </ul>
+  </nav>
+  
+  <div id="contents">
+  
+    <div class="pagettl2"><h2 class="pttl">西遠下水道検定</h2></div>
+  
+    <div id="quiz" class="contsinnr">
+
+      <template v-if="screen == 'loading'">
+        <div class="box01">読み込み中</div>
+      </template>
+
+      <template v-else-if="screen == 'error'">
+        <div class="box01">{{ error || 'エラー' }}</div>
+      </template>
+
+      <template v-else-if="screen == 'question'">
+        <div class="quizTitle">第{{ currentQuestionNumber }}問/{{ questionsCount }}問中</div>
+        <div class="kokuban-t5">{{ currentQuestion.query }}</div>
+        <div class="box01 mgB10">
+          <section class="quizArea">
+            <p class="taC mgB5">以下の{{ currentQuestion.choices.length }}つから選んでください</p>
+            <ul>
+              <li class="quizBox" v-for="(choice, index) in currentQuestion.choices">
+                <a href="#" @click.prevent="answer(index)">
+                  <div class="pic"><img :src="choice.image" class="fluidimg" alt=""></div>
+                  <div class="txt">
+                    <div class="quizNumber">{{ index2MaruNumber(index) }}</div>
+                    <p class="quizQue">{{ choice.text }}</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </template>
+
+      <template v-else-if="screen == 'answer'">
+        <div class="quizTitle">第{{ currentQuestionNumber }}問/{{ questionsCount }}問中</div>
+        <p class="quizAns" v-if="currentQuestionIsCorrect">正解です！</p>
+        <p class="quizAnsNo" v-else>残念、まちがいです・・・</p>
+        <div class="kokuban-t5 fwB" style="padding-top:3.4em;"><span class="title-t5">正解 {{ index2MaruNumber(currentQuestion.answer.index) }}</span>{{ currentQuestion.answer.text }}</div>
+        <div class="box01 mgB10" v-html="currentQuestion.description"></div>
+        <div class="btnA mgB0"><a href="#" @click.prevent="next()">{{ isQuestionRemaining ? '次の問題に進む' : '結果発表に進む' }}</a></div>
+      </template>
+
+      <template v-else-if="screen == 'result'">
+        <p class="quizTitle">結果発表</p>
+        <!--<p class="grading_b">{{ questionsCount }}問中/<span class="grading_a">{{ correctCount }}問正解</span></p>-->
+        <p class="grading_b"><span class="grading_a">{{ correctCount }}問正解</span>/{{ questionsCount }}問中</p>
+        <div class="box01 mgB10">
+          <div class="quizComment">
+            <img :src="result.image" alt="" class="quizCommentImg">
+            <div v-html="result.html"></div>
+          </div>
+        </div>
+        <div class="btnA mgB0 mgT10"><a href="#" @click.prevent="restart()">もう一度挑戦する</a></div>
+      </template>
+
+      <div class="box01" v-else>
+        JavaScriptを有効にしてください。
+      </div>
+
+    </div>
+
+  </div><!-- /contents -->
+  
+  
+  
+  <footer id="footer">
+    
+    <ul class="footnav">
+      <li><a href="../">HOME</a></li>
+      <li><a href="../aboutus/">当社について</a></li>
+      <li><a href="../business/">事業内容</a></li>
+      <li><a href="../bid/">入札・契約情報</a></li>
+      <li><a href="../csr/">CSR</a></li>
+      <li><span>お問い合わせ</span></li>
+      <li><a href="../faq/">よくある質問（FAQ）</a></li>
+      <li><a href="../tour/">施設見学のご案内</a></li>
+    </ul>
+    
+    <ul class="footnav">
+      <li><a href="../news/">新着情報</a></li>
+      <li><a href="../news/category/news2">ニュースリリース</a></li>
+      <li><a href="../privacy/">個人情報取扱規程</a></li>
+      <li><a href="../disclosure/">情報開示規程</a></li>
+      <li><a href="../news/category/news3">ニュースレター</a></li>
+      <li><a href="../usage/">サイト利用条件</a></li>
+      <li><a href="../access/">アクセスマップ</a></li>
+      <li><a href="../sitemap/">サイトマップ</a></li>
+    </ul>
+    
+    <div class="copy">
+      <div class="copyinn">Copyright © 浜松ウォーターシンフォニー（株）<br class="pc_none tb_none"><script type="text/javascript">document.write(new Date().getFullYear());</script> All Rights Reserved.</div>
+    </div>
+  </footer>
+  <div id="pagetop"><a href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></div>
+</div><!-- /wapper -->
+
+</body>
+</html>

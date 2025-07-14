@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+/********************************************************************
+	form.css
+*********************************************************************/
+#contents input,
+#contents textarea {
+	padding: 0.5em;
+}
+#contents .btn {
+  padding: 15px 20px;
+  font-size: 16px;
+}
+/*==========================================================================
+	お問い合わせフォーム
+============================================================================*/
+#contents .contsinnr .formArea {
+  padding: 0px;
+}
+#contents .contsinnr .formArea table {
+  border-top: solid 1px #CCCCCC;
+  width: 100%;
+}
+#contents .contsinnr .formArea th,
+#contents .contsinnr .formArea td {
+  border-bottom: solid 1px #CCCCCC;
+  padding: 10px 20px;
+  display: block;
+  
+  word-break: break-all;
+}
+#contents .contsinnr .formArea th {
+  text-align: left;
+  vertical-align: middle;
+  background-color: #f2f2f2;
+}
+#contents .contsinnr .formArea th .require {
+	color:#D80C24;
+	margin-left:0.3em;
+  font-weight: normal;
+}
+#contents .contsinnr .formArea .base,
+#contents .contsinnr .formArea .comment {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  #contents .contsinnr .formArea th {
+    display: block;
+    display: table-cell;
+    width: 35%;
+  }
+  #contents .contsinnr .formArea td {
+    display: block;
+    display: table-cell;
+    width: 65%;
+  }
+  #contents .contsinnr .formArea .base {
+    width: 70%;
+    box-sizing: border-box;
+  }
+  #contents .contsinnr .formArea .comment {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  
+}
+
+

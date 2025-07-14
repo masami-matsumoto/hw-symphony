@@ -1,0 +1,1027 @@
+@charset "utf-8";
+/* CSS Document */
+/********************************************************************
+	layout.css
+*********************************************************************/
+
+/* clearfix */
+.cf {
+	zoom:1;
+}
+.cf:before, .cf:after {
+	content: "";
+	display: table;
+}
+.cf:after {
+	clear:both;
+}
+
+/*--- リンク ---*/
+a:link, a:visited {
+	color: #0026A9;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #0026A9;
+	text-decoration:underline;
+}
+/*-- PDFマーク --*/
+.pdf::after {
+  font-family: 'FontAwesome';
+  content: "\f1c1";
+  margin-left: 5px;
+}
+
+/*--- ページトップ ---*/
+#pagetop {
+	position: fixed;
+  bottom: 10px;
+  right: 10px;
+	z-index:10;
+}
+#pagetop a {
+  display: block;
+  color: #FFFFFF;
+  height: 35px;
+  line-height: 35px;
+  width: 35px;
+  text-align: center;
+  background-color: #199c69;
+  border-radius: 4px;
+}
+
+/*--- フルードイメージ ---*/
+/* 拡大縮小 */
+.fluidimg {
+	width: 100%;
+	max-width: 100%;
+	height:auto;
+}
+/* 画像サイズ内で縮小 */
+.fluidimg2 {
+	width: auto;
+	max-width: 100%;
+	height:auto;
+}
+
+html {
+	width:100%;
+}
+body {
+	width: 100%;
+	/*font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;*/
+  font-family: "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	background-color: #FFFFFF;
+}
+img {
+  vertical-align: bottom;
+}
+
+.mincho{
+  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+
+/*==========================================================================
+	レイアウト
+============================================================================*/
+#wapper {
+	width:100%;
+	color: #333333;
+	font-size: 16px;
+  line-height: 1.8;
+}
+.sp_none {
+	display:none;
+}
+/*-- ボタン --*/
+.btnA {
+  margin: 40px auto;
+}
+.btnA a {
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #0062A9;
+  line-height: 1;
+  font-size: 18px;
+  padding: 15px 10px;
+  display: block;
+  transition: .2s linear;
+  position: relative;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px; 
+}
+.btnA a:after {
+  font-family: 'FontAwesome';
+  content: "\f0da";
+  position: absolute;
+  right: 10px;
+}
+/*--- リンク ---*/
+.btnA a:link, .btnA a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.btnA a:hover, .btnA a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+  background-color:#199C69;
+}
+
+/*--- タイトル ---*/
+.titleA {
+  font-size: 19px;
+  text-align: center;
+  margin: 25px 0px;
+  line-height: 1.4;
+  background-image: linear-gradient(to right, #0062A9 0%, #0062A9 45%, #199C69 55%, #199C69 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.titleCatch{
+  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+  font-size: 28px;
+  text-align: center;
+  margin: 25px 0px 40px 0px;;
+  line-height: 1.4;
+  color: #0062A9;
+}
+/*-- IE ハック --*/
+/* IE8〜11 */
+@media screen\0 {
+  .titleA {
+    background: none;
+    color: #0062A9;
+  }
+}
+.titleB {
+  font-size: 19px;
+  color: #333333;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+  margin: 50px 0px 30px;
+  line-height: 1.4;
+}
+.titleB::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 70px;
+  height: 4px;
+  margin-left: -35px;
+  background: linear-gradient(90deg, #0062A9, #199C69);
+}
+.titleC {
+  font-size: 18px;
+  border-left: #0062a9 solid 5px;
+  padding: 0px 10px;
+  margin: 40px 0px 30px 0px;
+  color: #666666;
+  line-height: 1.4;
+}
+.titleC .grn {
+  color: #199C69;
+  /*text-decoration: underline;*/
+}
+/*--- MSG ---*/
+.msgA {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 2.0;
+}
+.msgB {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 2.0;
+  font-weight: bold;
+}
+
+/*--- ページ内リンク ---*/
+/*#link01 {
+   margin-top:-84px;
+  padding-top:84px;
+}*/
+
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  #wapper {
+		font-size: 17px;
+  }
+  .sp_none {
+	  display:block;
+  }
+  .tb_none {
+	  display:none;
+  }
+  /*--- タイトル ---*/
+  .titleA {
+    font-size: 30px;
+  }
+  .titleCatch{
+    font-size: 33px;
+    margin: 25px 0px 50px 0px;
+  }
+  .titleB {
+    font-size: 22px;
+    margin: 60px 0px 40px;
+  }
+  .titleC {
+    font-size: 18px;
+  }
+  /*--- MSG ---*/
+  .msgA {
+    font-size: 17px;
+  }
+  .msgB {
+    font-size: 13px;
+  }
+  /*-- ボタン --*/
+  .btnA {
+    width: 50%;
+    margin: 40px auto;
+  }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  #wapper {
+		font-size: 18px;
+  }
+  .tb_none {
+	  display:block;
+  }
+  .pc_none {
+	  display:none;
+  }
+  /*--- タイトル ---*/
+  .titleA {
+    font-size: 32px;
+  }
+  .titleCatch{
+    font-size: 35px;
+    margin: 25px 0px 60px 0px;
+  }
+  .titleB {
+    font-size: 24px;
+    margin: 70px 0px 50px;
+  }
+  .titleC {
+    font-size: 20px;
+  }
+  /*--- MSG ---*/
+  .msgA {
+    font-size: 18px;
+  }
+  .msgB {
+    font-size: 15px;
+  }
+  /*-- ボタン --*/
+  .btnA {
+    width: 250px;
+    margin: 50px auto;
+  }
+}
+
+/*==========================================================================
+	メインメニュー
+============================================================================*/
+/*-- ハンバーガーボタン --*/
+.btnWap {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  right: 15px;
+  top: 8px;
+  z-index: 10100;
+}
+.menu {
+  width: 25px;
+  height:25px;
+  top: 0px;
+  position:relative;
+  cursor:pointer;
+}
+.menu1 { width:25px; height:5px; background-color:#FFF; top:0px; position:absolute; } 
+.menu2 { width:25px; height:5px; background-color:#FFF; top:10px; position:absolute; } 
+.menu3 { width:25px; height:5px; background-color:#FFF; top:20px; position:absolute; }
+/*アニメーション*/
+.menu1,.menu2,.menu3
+{ transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out; /* Opera */
+  -moz-transition: all 0.5s ease-out; /* Firefox */
+  -webkit-transition: all 0.5s ease-out; /* GoogleChrome, Safari */
+  -ms-transition: all 0.5s ease-out; /* IE */ }
+/*動き*/
+.menuclick1
+{ top:10px;
+  -o-transform: rotate(405deg);
+  -moz-transform: rotate(405deg);
+  -webkit-transform: rotate(405deg);
+  -ms-transform: rotate(405deg);
+  transform: rotate(405deg); }
+.menuclick2
+{ opacity:0;}
+.menuclick3
+{ top:10px;
+  -o-transform: rotate(-405deg);
+  -moz-transform: rotate(-405deg);
+  -webkit-transform: rotate(-405deg);
+  -ms-transform: rotate(-405deg);
+  transform: rotate(-405deg); }
+/*--------------------------------------------------
+  グローバルナビゲーション
+---------------------------------------------------- */
+.gNavi {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 98, 169, .95);
+  overflow: auto;
+  display: none;
+  z-index: 10099;
+}
+.gNavi.is-open {
+    display: block;
+}
+
+.gNavi ul {
+  padding-top: 42px;
+  color: #FFFFFF;
+  font-size: 26px;
+}
+.gNavi ul li {
+  text-align: center;
+}
+.gNavi ul li a {
+  display: block;
+  padding: 10px 0px;
+}
+/*--- リンク ---*/
+.gNavi  a:link,
+.gNavi  a:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.gNavi  a:hover,
+.gNavi  a:active {
+  color: #b6d9b7;
+  text-decoration: none;
+}
+/*--- オーバー状態 ---*/
+body#home .gNavi li.gnav1 a,
+body#aboutus .gNavi li.gnav2 a,
+body#business .gNavi li.gnav3 a,
+body#recruit .gNavi li.gnav4 a,
+body#csr .gNavi li.gnav5 a {
+   color: #b6d9b7;
+}
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  /*-- ハンバーガーボタン --*/
+  .btnWap {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    right: 20px;
+    top: 20px;
+  }
+  .menu {
+    width: 45px;
+    height:45px;
+    top: 0px;
+    position:relative;
+    cursor:pointer;
+  }
+  .menu1 { width:45px; height:5px; background-color:#FFF; top:0px; position:absolute; } 
+  .menu2 { width:45px; height:5px; background-color:#FFF; top:20px; position:absolute; } 
+  .menu3 { width:45px; height:5px; background-color:#FFF; top:40px; position:absolute; }
+  /*アニメーション*/
+  .menu1,.menu2,.menu3
+  { transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out; /* Opera */
+    -moz-transition: all 0.5s ease-out; /* Firefox */
+    -webkit-transition: all 0.5s ease-out; /* GoogleChrome, Safari */
+    -ms-transition: all 0.5s ease-out; /* IE */ }
+  /*動き*/
+  .menuclick1
+  { top:20px;
+    -o-transform: rotate(405deg);
+    -moz-transform: rotate(405deg);
+    -webkit-transform: rotate(405deg);
+    -ms-transform: rotate(405deg);
+    transform: rotate(405deg); }
+  .menuclick2
+  { opacity:0;}
+  .menuclick3
+  { top:20px;
+    -o-transform: rotate(-405deg);
+    -moz-transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+    -ms-transform: rotate(-405deg);
+    transform: rotate(-405deg); }
+  /*--------------------------------------------------
+  グローバルナビゲーション
+---------------------------------------------------- */
+  .gNavi ul {
+    padding-top: 84px;
+    color: #FFFFFF;
+    font-size: 36px;
+  }
+  .gNavi ul li a {
+    padding: 20px 0px;
+  }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  /*-- ハンバーガーボタン --*/
+  .btnWap {
+    display: none;
+  }
+  /*--------------------------------------------------
+  グローバルナビゲーション
+---------------------------------------------------- */
+  .gNavi {
+    display: none !important;
+  }
+}
+/*==========================================================================
+	ヘッダー
+============================================================================*/
+#header {
+	/*max-width: 100%;*/
+  width: 100%;
+  position: fixed;
+	margin:0px auto;
+  background-color: #0062a9;
+  z-index: 10090;
+}
+#header #headerinnr {
+  width: 100%;
+  position: relative;
+  height: 42px;
+  background-image: url(/wp/wp-content/themes/hw-symphony/common/img/head_bg.png);
+	background-size: 260px 42px;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+#headerinnr #logo {
+  width: 200px;
+  position: absolute;
+  left: 30px;
+  top: 5px;
+  z-index: 99;
+}
+/*--------------------------------------------------
+  PC用サブナビゲーション
+---------------------------------------------------- */
+#headerinnr .pcSubNavi {
+  display: none;
+}
+/*--------------------------------------------------
+  PC用グローバルナビゲーション
+---------------------------------------------------- */
+#headerinnr .pcGloNavi {
+  display: none;
+}
+
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  #header #headerinnr {
+    height: 84px;
+    background-size: 436px 84px;
+    margin: 0 auto;
+  }
+  #headerinnr #logo {
+    width: 317px;
+    position: absolute;
+    left: 63px;
+    top: 15px;
+  }
+  
+  
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  #header #headerinnr {
+    max-width: 1260px;
+    height: 84px;
+    background-size: 436px 84px;
+    margin: 0 auto;
+  }
+  #headerinnr #logo {
+    width: 317px;
+    position: absolute;
+    left: 63px;
+    top: 15px;
+  }
+  /*--------------------------------------------------
+    PC用サブナビゲーション
+  ---------------------------------------------------- */
+  #headerinnr .pcSubNavi {
+    display: block;
+    font-size: 12px;
+    color: #FFFFFF;
+  }
+  #headerinnr .pcSubNavi ul {
+    text-align: right;
+    padding: 10px 0px;
+  }
+  #headerinnr .pcSubNavi ul li {
+    display: inline;
+    border-right: solid 1px #FFFFFF;
+    padding: 0px 10px;
+  }
+  #headerinnr .pcSubNavi ul li:last-child {
+    border: none;
+  }
+  /*--- リンク ---*/
+  #headerinnr .pcSubNavi a:link,
+  #headerinnr .pcSubNavi a:visited {
+	  color: #FFFFFF;
+	  text-decoration: none;
+  }
+  #headerinnr .pcSubNavi a:hover,
+  #headerinnr .pcSubNavi a:active {
+	  color: #b6d9b7;
+	  text-decoration: none;
+  }
+  /*--------------------------------------------------
+    PC用グローバルナビゲーション
+  ---------------------------------------------------- */
+  #headerinnr .pcGloNavi {
+    display: block;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-left: 457px;
+    margin-top: 10px;
+  }
+  #headerinnr .pcGloNavi ul{
+    width: 100%;
+  }
+  #headerinnr .pcGloNavi ul li {
+    display: inline;
+    padding: 0px 2%;
+  }
+  /*--- リンク ---*/
+  #headerinnr .pcGloNavi a:link,
+  #headerinnr .pcGloNavi a:visited {
+	  color: #FFFFFF;
+	  text-decoration: none;
+  }
+  #headerinnr .pcGloNavi a:hover,
+  #headerinnr .pcGloNavi a:active {
+	  color: #b6d9b7;
+	  text-decoration: none;
+  }
+  /*--- オーバー状態 ---*/
+  body#home .pcGloNavi li.gnav1 a,
+  body#aboutus .pcGloNavi li.gnav2 a,
+  body#business .pcGloNavi li.gnav3 a,
+  body#recruit .pcGloNavi li.gnav4 a,
+  body#csr .pcGloNavi li.gnav5 a {
+    color: #b6d9b7;
+  }
+}
+
+
+/*==========================================================================
+	コンテンツ
+============================================================================*/
+#contents {
+  /* 固定ヘッダーの高さ分あける*/
+  padding-top: 42px;
+  margin-bottom: 60px;
+}
+#contents .contsinnr {
+  padding: 0px 10px;
+}
+#contents .contsinnr p {
+  margin-bottom: 15px;
+} 
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  #contents {
+    /* 固定ヘッダーの高さ分あける*/
+    padding-top: 84px;
+    margin-bottom: 100px;
+  }
+  #contents .contsinnr {
+    padding: 10px 10px 0px 10px;
+  }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  
+  #contents .contsinnr {
+    max-width: 960px;
+    padding: 20px 0px 0px 0px;
+    margin: 0px auto;
+  }
+}
+
+
+/*==========================================================================
+	フッダー
+============================================================================*/
+#footer {
+  background-color: #f2f2f2;
+  font-size: 13px;
+}
+/*-- フッダーナビ --*/
+#footer .footnav {
+  font-size: 13px;
+  overflow: hidden;
+}
+#footer .footnav li {
+  list-style: none;
+  width: 50%;
+  box-sizing: border-box;
+  float: left;
+  border-bottom: solid 1px #CCCCCC;
+}
+#footer .footnav li:nth-child(odd) {
+  border-right: solid 1px #CCCCCC;
+}
+#footer .footnav li:nth-child(even) {
+}
+#footer .footnav li a,
+#footer .footnav li span {
+  display: block;
+  padding: 10px 0px;
+  text-align: center;
+}
+/*--- リンク ---*/
+#footer .footnav li a:link, #footer .footnav li a:visited {
+	color: #333333;
+	text-decoration: none;
+}
+#footer .footnav li a:hover, #footer .footnav li a:active {
+	color: #0062a9;
+	text-decoration: none;
+  background-color:#b6d9b7;
+}
+/*-- コピーライト --*/
+#footer .copy {
+  background-color: #0062a9;
+  font-size: 12px;
+  color: #FFFFFF;
+  line-height: 1.4;
+}
+#footer .copyinn {
+  padding: 10px 0px;
+  text-align: center;
+}
+/*****************************************************
+	320px以下【sp】
+******************************************************/
+@media print, screen and (max-width: 320px) {
+  /*-- フッダーナビ --*/
+  #footer .footnav li {
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    float: left;
+    border-bottom: solid 1px #CCCCCC;
+  }
+  #footer .footnav li:nth-child(odd) {
+    border-right:none;
+  }
+}
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  /*-- コピーライト --*/
+  #footer .copy {
+    line-height: 1.1;
+  }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  #footer {
+    padding-top: 30px;
+  }
+  /*-- フッダーナビ --*/
+  #footer .footnav {
+    font-size: 13px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0px auto 30px;
+    max-width: 1260px;
+  }
+  #footer .footnav li {
+    display:inline;
+    float:none;
+    border-bottom:none;
+    padding: 0px 1%;
+    font-weight: bold;
+  }
+  #footer .footnav li a,
+  #footer .footnav li span {
+    display:inline;
+  }
+  #footer .footnav li:nth-child(odd) {
+    border-right:none;
+  }
+  /*--- リンク ---*/
+  #footer .footnav li a:hover, #footer .footnav li a:active {
+	  color: #0062a9;
+	  text-decoration: none;
+    background-color: transparent;
+  }
+  /*-- コピーライト --*/
+  #footer .copyinn {
+    max-width: 1260px;
+    margin: 0px auto;
+    text-align:right;
+  }
+}
+
+
+/*==========================================================================
+	下層ページタイトル
+============================================================================*/
+.pagettl {
+  background-image: url(../img/pagettl_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  margin: 10px auto 30px;
+  padding: 20px 10px;
+  
+  border-top: #BBD3F9 solid 1px;
+  border-bottom: #BBD3F9 solid 1px;
+}
+.pagettl .pttl {
+  /*font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;*/
+  font-size: 20px;
+  background-image: linear-gradient(to right, #0062A9 0%, #0062A9 45%, #199C69 55%, #199C69 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*-- IE ハック --*/
+/* IE8〜11 */
+@media screen\0 {
+  .pagettl .pttl {
+    background: none;
+    color: #0062A9;
+  }
+}
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  .pagettl {
+     margin: 20px auto 30px;
+     padding: 30px 10px;
+  }
+  .pagettl .pttl {
+    font-size: 36px;
+  }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  .pagettl {
+    max-width: 1260px;
+    height: 220px;
+    line-height: 220px;
+    margin: 30px auto 30px;
+    padding: 0px;
+    
+    border: none;
+  }
+  .pagettl .pttl {
+    font-size: 52px;
+  }
+}
+/*==========================================================================
+	下層ページメニュー トップ位置
+============================================================================*/
+  .pageMenuTopArea {
+    display: none;
+  }
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  .pageMenuTopArea {
+    padding: 0px 10px;
+    display: block;
+    font-size: 12px;
+  }
+  .pageMenuTopArea .pageMenuTop {
+    list-style: none;
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .pageMenuTopArea .pageMenuTop li {
+    display: inline;
+    border-right: solid 1px #CCCCCC;
+    padding: 0px 10px;
+  }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  .pageMenuTopArea {
+    max-width: 1260px;
+    margin: 0px auto;
+  font-size: 14px;
+  }
+.pageMenuTopArea .pageMenuTop li {
+padding: 0px 20px;
+  }
+}
+/*==========================================================================
+	下層ページメニュー（3列用）
+============================================================================*/
+.pageMenuArea {
+  padding: 60px 0px;
+  background-color: #c8dcdc;
+  background-image: url(/wp/wp-content/themes/hw-symphony/common/img/bg_dent_gr.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.pageMenuArea ul {
+  list-style: none;
+}
+.pageMenuArea ul .pgmenu {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 0px 10px;
+}
+.pageMenuArea ul .pgmenu a {
+  display: block;
+  background-color: #0062a9;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #FFFFFF;
+  padding: 10px;
+  transition: .2s linear;
+  font-size: 13px;
+}
+/*--- リンク ---*/
+.pageMenuArea ul .pgmenu a:link, .pageMenuArea ul .pgmenu a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.pageMenuArea ul .pgmenu a:hover, .pageMenuArea ul .pgmenu a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+  background-color:#199C69;
+}
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+    .pageMenuArea {
+      padding: 100px 0px;
+    }
+    .pageMenuArea ul .pgmenu {
+      width: 33.33%;
+      float: left;
+    }
+    .pageMenuArea ul .pgmenu a {
+      display: block;
+      padding: 20px 10px;
+      font-size: 14px;
+    }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  .pageMenuArea ul {
+    max-width: 1300px;
+    margin: 0px auto;
+  }
+  .pageMenuArea ul .pgmenu a {
+      display: block;
+      padding: 30px 10px;
+      font-size: 15px;
+    }
+}
+/*==========================================================================
+下層ページメニュー（2列用）
+============================================================================*/
+.pageMenuArea2row {
+padding: 60px 0px;
+background-color: #c8dcdc;
+background-image: url(/wp/wp-content/themes/hw-symphony/common/img/bg_dent_gr.png);
+background-position: top center;
+background-repeat: no-repeat;
+}
+.pageMenuArea2row ul {
+list-style: none;
+}
+.pageMenuArea2row ul .pgmenu {
+width: 100%;
+box-sizing: border-box;
+margin-bottom: 10px;
+padding: 0px 10px;
+}
+.pageMenuArea2row ul .pgmenu a {
+display: block;
+background-color: #0062a9;
+text-align: center;
+border-bottom-left-radius: 15px;
+border-top-right-radius: 15px;
+color: #FFFFFF;
+padding: 10px;
+transition: .2s linear;
+font-size: 13px;
+}
+/*--- リンク ---*/
+.pageMenuArea2row ul .pgmenu a:link, .pageMenuArea2row ul .pgmenu a:visited {
+color: #FFFFFF;
+text-decoration: none;
+}
+.pageMenuArea2row ul .pgmenu a:hover, .pageMenuArea2row ul .pgmenu a:active {
+color: #FFFFFF;
+text-decoration: none;
+background-color:#199C69;
+}
+/*****************************************************
+768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+.pageMenuArea2row {
+padding: 100px 0px;
+}
+.pageMenuArea2row ul .pgmenu {
+width: 50%;
+float: left;
+}
+.pageMenuArea2row ul .pgmenu a {
+display: block;
+padding: 20px 10px;
+font-size: 14px;
+}
+}
+/*****************************************************
+1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+.pageMenuArea2row ul {
+max-width: 1300px;
+margin: 0px auto;
+}
+.pageMenuArea2row ul .pgmenu a {
+display: block;
+padding: 30px 10px;
+font-size: 15px;
+}
+}
+/* ======================================
+プリント調整用
+========================================= */
+@media print {
+#header {
+/*max-width: 100%;*/
+width: 100%;
+position:relative;
+margin:0px auto;
+background-color: #0062a9;
+z-index: 10090;
+}
+#headerinnr .pcSubNavi {
+display: none;
+}
+#headerinnr .pcGloNavi {
+display: none;
+}
+#contents {
+padding-top: 0px;
+margin-bottom: 60px;
+}
+}

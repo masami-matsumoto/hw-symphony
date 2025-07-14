@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+/********************************************************************
+	aboutus.css
+*********************************************************************/
+/*==========================================================================
+	代表取締役メッセージ
+============================================================================*/
+.message {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.message .pic {
+  margin-bottom: 25px;
+  text-align: center;
+}
+.message .txt {
+  margin-bottom: 10px;
+}
+.message .txt .name {
+  text-align: right;
+}
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  .message .pic {
+    text-align: left;
+    float: left;
+    width: 300px;
+  }
+  .message .txt {
+    margin-left: 300px;
+  }
+}
+
+
+/*==========================================================================
+	企業理念
+============================================================================*/
+.rinen ol {
+	border: solid 1px #cccccc;
+  padding: 30px;
+  background-color:#F7F7F7;
+}
+.rinen ol li {
+	list-style-type: decimal;
+	margin-left: 35px;
+}
+/*==========================================================================
+	会社概要
+============================================================================*/
+.cpProfile {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.cpProfile th,
+.cpProfile td {
+  padding: 20px;
+  text-align: left;
+}
+.cpProfile th {
+  display: block;
+  background-color: #f2f2f2;
+}
+.cpProfile td {
+  border-bottom: 1px solid #CCCCCC;
+  display: block;
+}
+/*****************************************************
+	768px以上【tablet】
+******************************************************/
+@media print, screen and (min-width: 768px) {
+  .cpProfile th {
+    border-bottom: 1px solid #CCCCCC;
+    background-color: transparent;
+    display: table-cell;
+    font-size: 20px;
+    width: 25%;
+    
+  }
+  .cpProfile td {
+    border-bottom: 1px solid #CCCCCC;
+    display: table-cell;
+    width: 75%;
+  }
+}
+/*****************************************************
+	1024px以上【PC】
+******************************************************/
+@media print, screen and (min-width: 1024px) {
+  
+}
+
+/*==========================================================================  
+下層ページメニュー 
+============================================================================*/  
+/*****************************************************  
+768px以上【tablet】 
+******************************************************/ 
+@media print, screen and (min-width: 768px) {
+  /*
+    .pageMenuArea ul .pgmenu {
+      width: 50%;
+      float: left;
+    }
+ */
+}
+/*****************************************************  
+1024px以上【PC】  
+******************************************************/ 
+@media print, screen and (min-width: 1024px) {
+}
